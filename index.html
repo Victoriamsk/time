@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    function convertHoursToTime(timeHours) {
+        
+    if (gradToTime>360 || gradToTime<0) {
+        console.log("Введите число от 0 до 360");
+        return false;
+    } 
+        const hours = Math.floor(timeHours).toString(10).padStart(2, 0);
+        const minutes = Math.floor((timeHours * 60) % 60).toString(10).padStart(2, 0);
+        const seconds = Math.floor((timeHours * 60 * 60) % 60).toString(10).padStart(2, 0);
+        return `${hours}:${minutes}:${seconds}`;
+    }
+
+    function gradToTime(gradValue) {
+        return convertHoursToTime(gradValue / (360 / 24)); // gradValue / 15
+    }
+
+    console.log(gradToTime(360));
+
+       
+    
+
+
+</script>
+
+</html>
